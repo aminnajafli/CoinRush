@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4703309576710827011}
   - component: {fileID: 5053768138308509103}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: PaperMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -4306300530075693824, guid: 14de8c221b605ce418c275a972bf1dcf, type: 3}
   m_Color: {r: 1, g: 0.7882353, b: 0.23529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
