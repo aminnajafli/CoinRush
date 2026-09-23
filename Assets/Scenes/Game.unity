@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &159090613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159090615}
+  - component: {fileID: 159090614}
+  m_Layer: 0
+  m_Name: GameSession
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &159090614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159090613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9790043271055134aa47b37c27956269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameSession
+  settings: {fileID: 11400000, guid: 909481f5431bc7943bb7daa347f72fb8, type: 2}
+  basket: {fileID: 1088689596}
+--- !u!4 &159090615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159090613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.07432, y: -6.56736, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +419,7 @@ GameObject:
   - component: {fileID: 1088689593}
   - component: {fileID: 1088689592}
   - component: {fileID: 1088689596}
+  - component: {fileID: 1088689597}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -543,6 +590,21 @@ MonoBehaviour:
   keyboardSpeed: 10
   horizontalPadding: 1
   bottomMargin: 1.2
+--- !u!114 &1088689597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088689591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec6833964487e4499240f9708662535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasketController
+  keyboardSpeed: 10
+  horizontalPadding: 1
+  bottomMargin: 1.2
 --- !u!1 &1389846510
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +616,7 @@ GameObject:
   - component: {fileID: 1389846512}
   - component: {fileID: 1389846511}
   - component: {fileID: 1389846513}
+  - component: {fileID: 1389846514}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -634,6 +697,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a30cbb08d4e484ab7804cd98ddc44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KillZone
+--- !u!114 &1389846514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389846510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a30cbb08d4e484ab7804cd98ddc44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KillZone
+--- !u!1 &1559813312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559813314}
+  - component: {fileID: 1559813313}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1559813313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559813312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9f546d043a2804084b1e938c0576d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
+  session: {fileID: 159090614}
+  settings: {fileID: 11400000, guid: 909481f5431bc7943bb7daa347f72fb8, type: 2}
+  coinPrefabs:
+  - {fileID: -6730433234844633570, guid: 02c052b5475e29146b9193e6cdafeb2d, type: 3}
+  - {fileID: -3342040158819206253, guid: a8c8e42154da51f4692321387eafd560, type: 3}
+  - {fileID: 1873913923411907549, guid: 9ee1b226f9979ca4d9155d2f05a54ad8, type: 3}
+  - {fileID: -7747688706192097123, guid: 822605a7e83f7df4e832288298f19501, type: 3}
+  bombPrefab: {fileID: -2209760392161825839, guid: 607f65cfe93654f4ca9c8579454e479d, type: 3}
+  fruitPrefabs:
+  - {fileID: 5031683378058071871, guid: 4cf690051e273434f862fadc7917627c, type: 3}
+  - {fileID: 3050003098168635416, guid: 8c4a4725f8e03944eb4c2d5376279b76, type: 3}
+  - {fileID: 6531670474304417158, guid: b01fab577f4cf954aa587fd10d3f9f92, type: 3}
+  - {fileID: 6468635602452524451, guid: 5ad724cc41bfe6b48982c0a3fafd796f, type: 3}
+  horizontalPadding: 0.5
+--- !u!4 &1559813314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559813312}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -642,3 +775,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1088689595}
   - {fileID: 1389846512}
+  - {fileID: 1559813314}
+  - {fileID: 159090615}
