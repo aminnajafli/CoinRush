@@ -20,7 +20,6 @@ public class GameSession : MonoBehaviour
 
     public bool IsPlaying { get; private set; }
 
-    // 0 = tur başı, 1 = tur sonu. zorluk bu değere göre artar.
     public float Progress => Mathf.Clamp01(1f - timeLeft / settings.roundDuration);
 
     private int score;
@@ -97,6 +96,10 @@ public class GameSession : MonoBehaviour
                 {
                     EndRound();
                 }
+                return;
+
+            case ItemType.PowerUp:
+                // puan veya can değiştirmiyor; yavaşlatma etkisini ItemSpawner kendi başına yönetiyor.
                 return;
         }
     }

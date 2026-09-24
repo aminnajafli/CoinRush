@@ -5,7 +5,8 @@ public enum ItemType
 {
     Coin,
     Fruit,
-    Bomb
+    Bomb,
+    PowerUp
 }
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -26,7 +27,6 @@ public class FallingItem : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
     }
 
-    // havuz, nesneyi oluştururken kendi Release fonksiyonunu buraya verir.
     public void Bind(Action<FallingItem> release)
     {
         releaseToPool = release;
@@ -39,7 +39,6 @@ public class FallingItem : MonoBehaviour
         inUse = true;
     }
 
-    // sepet veya KillZone çağırır. aynı nesne iki kez iade edilemez.
     public void Release()
     {
         if (!inUse)

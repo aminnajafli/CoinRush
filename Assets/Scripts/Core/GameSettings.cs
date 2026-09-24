@@ -19,4 +19,9 @@ public class GameSettings : ScriptableObject
 
     [Range(0f, 1f)] public float startFruitChance = 0.30f;
     [Range(0f, 1f)] public float endFruitChance = 0.20f;
+
+    [Header("Power-up: yavaşlatma")]
+    [Range(0f, 1f)] public float powerUpChance = 0.05f;
+    public float powerUpSlowDuration = 5f;
+    [Range(0.1f, 1f)] public float powerUpSlowMultiplier = 0.5f;
 }
